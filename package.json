@@ -1,0 +1,50 @@
+{
+	"name": "hexo-fromt-matter",
+	"displayName": "hexo-fromt-matter",
+	"description": "Hexo front matter plugin for Visual Studio Code.",
+	"version": "0.0.1",
+	"publisher": "humbinal",
+	"repository": "https://github.com/humbinal/hexo-front-matter-vscode",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"icon": "images/logo.png",
+	"activationEvents": [
+		"onCommand:extension.hexoFromtMatter"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.hexoFromtMatter",
+				"title": "hexo front matter"
+			}
+		],
+		"keybindings": [{
+			"command": "extension.hexoFromtMatter",
+			"key": "ctrl+shift+alt+h",
+			"mac": "cmd+shift+alt+h",
+			"when": "editorTextFocus"
+		}]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint . --ext .ts,.tsx",
+		"watch": "tsc -watch -p ./"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.0",
+		"@types/vscode": "^1.34.0",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"eslint": "^7.1.0",
+		"typescript": "^3.9.4"
+	},
+	"dependencies": {
+		"moment": "^2.26.0"
+	}
+}
