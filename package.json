@@ -45,6 +45,6 @@
 		"typescript": "^3.9.4"
 	},
 	"dependencies": {
-		"moment": "^2.26.0"
+		"moment": "^2.29.4"
 	}
 }
